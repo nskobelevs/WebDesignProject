@@ -223,7 +223,6 @@ header {
 }
 
 .navigation {
-  position: -webkit-sticky;
   position: sticky;
   transition: all 0.25s ease-in-out 0s;
   background-color: white;
@@ -302,6 +301,8 @@ header {
   padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
 }
 
 .container section {
@@ -324,6 +325,8 @@ footer section {
   align-items: stretch;
   -webkit-align-items: stretch;
   flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
 }
 
 footer section ul {

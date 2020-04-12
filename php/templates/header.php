@@ -1,6 +1,6 @@
 <header>
     <div id="top-bar">
-        <h2>Title</h2>
+        <h2>Cuisine Catering</h2>
     </div>
 
     <input type="checkbox" class="hidden" id="nav-checkbox">
@@ -11,7 +11,8 @@
         <ul>
             <?php
             $uri = $_SERVER["REQUEST_URI"];
-            $page = end(explode("/", $uri));
+            $page_array = explode("/", $uri);
+            $page = end($page_array);
             ?>
             <li>
                 <a <?php if ($page == "") {echo 'class="current-page"';} ?> href=".">Home</a>
@@ -24,4 +25,5 @@
             </li>
         </ul>
     </nav>
+
 </header>
