@@ -12,7 +12,7 @@
 
 <div id="showcase">
     <img class="small-screen" src="img/wok.jpg" alt="A wok on a hob">
-    <span id="get-started-button">
+    <span id="top-button" class="get-started-button">
       <a href="users/sign-up">Pick your cuisine</a>
     </span>
     <video class="large-screen" oncontextmenu="return false;" autoplay loop>
@@ -20,31 +20,45 @@
     </video>
 </div>
 
-<div class="container">
-    <section>
+<div class="parallax-container">
+    <section class="container">
         <i class="fas fa-utensils fa-7x"></i>
-        <section class="footer-text">
-            <h5>Pick you're cuisine</h5>
-            <p>Pick you're preferred cuisine from our wide variety of choice availabe</p>
+        <section class="section-text">
+            <h3 class="title-cards">Pick your cuisine</h3>
+            <p>Pick your preferred cuisine from our wide variety of available choices</p>
         </section>
     </section>
-    <section>
+
+    <div class="parallax" id="image1"></div>
+
+    <section class="container">
         <i class="fas fa-users fa-7x"></i>
-        <section class="footer-text">
-            <h5>Pick you're group size</h5>
-            <p>We cater events from groups as low as 5 people to 500</p>
+        <section class="section-text">
+            <h3 class="title-cards">Pick your group size</h3>
+            <p>We cater events from groups as low as 5 people, up to gatherings of 500</p>
         </section>
     </section>
-    <section>
+
+    <div class="parallax" id="image2"></div>
+
+    <section class="container">
         <i class="fas fa-couch fa-7x"></i>
-        <section class="footer-text">
-            <h5>Enjoy your food with no hassle</h5>
+        <section class="section-text">
+            <h3 class="title-cards">Enjoy your food with no hassle</h3>
             <p>Once you place your order, you can rest and leave everything up to us!</p>
         </section>
     </section>
 </div>
 
-<?php include("php/templates/footer.php") ?>
+<div class="container">
+
+    <span class="large-screen" id="huge-margin"></span>
+    <span class="get-started-button small-screen">
+      <a href="users/sign-up">Pick your cuisine</a>
+    </span>
+</div>
+
+<?php //include("php/templates/footer.php") ?>
 <?php include_once("php/templates/scripts.php"); ?>
 </body>
 

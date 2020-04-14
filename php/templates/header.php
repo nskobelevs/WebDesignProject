@@ -1,6 +1,6 @@
 <header>
     <div id="top-bar">
-        <h2>Cuisine Catering</h2>
+        <a href="/"><h2>Cuisine Catering</h2></a>
     </div>
 
     <input type="checkbox" class="hidden" id="nav-checkbox">

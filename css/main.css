@@ -104,8 +104,13 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/*Palette from https://coolors.co/*/
 :root {
-  --primary-color: #1473E1;
+  --color1: rgba(41, 39, 76, 1);
+  --color2: rgba(84, 54, 107, 1);
+  --color3: rgba(126, 82, 160, 1);
+  --color4: rgba(210, 149, 191, 1);
+  --color5: rgba(230, 188, 205, 1);
 }
 
 * {
@@ -115,7 +120,7 @@ textarea {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
   height: 100%;
 }
 
@@ -143,20 +148,23 @@ header {
   position: sticky;
   position: -webkit-sticky;
   top: 0;
-  height: 3rem;
-  background-color: white;
+  background-color: var(--color3);
   z-index: 10;
+  color: white;
+  font-family: "Dancing Script", cursive;
+  font-size: 1.2rem;
+  height: 3rem;
 }
 
 #top-bar {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: inherit;
-  text-align: center;
-  padding: 0.5rem 0;
-  height: 3rem;
   width: 100%;
   border-bottom: 1px solid black;
   z-index: 10;
+  height: 100%;
 }
 
 #nav-toggle {
@@ -164,8 +172,8 @@ header {
   top: 0;
   left: 0;
   width: 3rem;
-  height: 3rem;
   cursor: pointer;
+  height: 100%;
 }
 
 #nav-toggle-icon {
@@ -174,7 +182,7 @@ header {
   left: 50%;
   width: 50%;
   height: 0.1rem;
-  background-color: black;
+  background-color: white;
   transform: translateX(-50%);
   transition: all 0.25s ease-in-out 0s;
 }
@@ -186,7 +194,7 @@ header {
   height: inherit;
   top: 0.4rem;
   left: 0;
-  background-color: black;
+  background-color: white;
   transition: all 0.25s ease-in-out 0s;
 
 }
@@ -198,7 +206,7 @@ header {
   height: inherit;
   top: -0.4rem;
   left: 0;
-  background-color: black;
+  background-color: white;
   transition: all 0.25s ease-in-out 0s;
 
 }
@@ -226,7 +234,7 @@ header {
   position: -webkit-sticky;
   position: sticky;
   transition: all 0.25s ease-in-out 0s;
-  background-color: white;
+  background-color: inherit;
   width: 100%;
   z-index: -1;
 }
@@ -237,15 +245,16 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: inherit;
 }
 
 .navigation a {
   display: block;
-  color: black;
   width: 100%;
   height: 100%;
   padding: 0.6rem 0;
   text-transform: uppercase;
+  color: inherit;
 }
 
 .navigation li {
@@ -266,33 +275,40 @@ header {
 }
 
 #showcase img {
-  z-index: -10;
+  width: 100%;
+  z-index: -9999;
+  margin: 0;
+  padding: 0;
 }
 
-#get-started-button {
+.get-started-button#top-button {
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
   display: block;
-  /*background-color: rgba(255, 255, 255, 0.5);*/
-  background-color: var(--primary-color);
-  box-shadow: 0 0.4rem 0 #0e4482;
-  -moz-box-shadow: 0 0.4rem 0 #0e4482;
-  -webkit-box-shadow: 0 0.4rem 0 #0e4482;
-  text-align: center;
-  border-radius: 1rem;
-  padding: 0 1rem;
-  /*border: 3px solid var(--primary-color);*/
 }
 
-#get-started-button a {
+.get-started-button {
+  background-color: var(--color3);
+  box-shadow: 0.2rem 0.4rem 0 var(--color2);
+  -moz-box-shadow: 0.2rem 0.4rem 0 var(--color2);
+  -webkit-box-shadow: 0.2rem 0.4rem 0 var(--color2);
+  text-align: center;
+  border-radius: 1rem;
+  margin: auto;
+  width: 15rem;
+  min-height: 2rem;
+  font-family: "Dancing Script", cursive;
+}
+
+.get-started-button a {
   display: block;
   width: 100%;
   height: 100%;
   font-size: 1.2rem;
   margin: 0.4em 0;
-  color: black;
+  color: white;
 }
 
 .container {
@@ -304,9 +320,45 @@ header {
   flex-direction: column;
 }
 
-.container section {
+section.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-text {
   text-align: center;
-  margin-top: 3rem;
+}
+
+.parallax {
+  background-size: contain;
+  height: 15vh;
+}
+
+.parallax-container {
+  min-height: 100%;
+  min-width: 100%;
+  background-color: white;
+}
+
+#image1 {
+  background: url("../img/salmon.jpg") no-repeat fixed center;
+  background-size: 200%;
+}
+
+#image2 {
+  background: url("../img/casserole-dish.jpg") no-repeat fixed center;
+  background-size: 200%;
+}
+
+.title-cards {
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+}
+
+#huge-margin {
+  margin-bottom: 90vh;
 }
 
 footer {
@@ -316,7 +368,8 @@ footer {
   -webkit-align-items: stretch;
   justify-content: center;
   -webkit-justify-content: center;
-  background: var(--primary-color);
+  background: var(--color3);
+  color: white;
 }
 
 footer section {
@@ -365,7 +418,6 @@ footer section ul {
   position: absolute;
   white-space: nowrap;
   width: 1px;
-  /* 1 */
 }
 
 /*
@@ -443,11 +495,13 @@ footer section ul {
     display: flex;
     flex-direction: row;
     border-bottom: 2px solid black;
-
   }
 
   #top-bar {
-    width: 20%;
+    width: auto;
+    flex-shrink: 0;
+    margin: 0 1rem;
+    padding: 0.2rem 0;
     border-bottom: none;
   }
 
@@ -465,8 +519,72 @@ footer section ul {
     transform: none;
   }
 
+  #showcase {
+    position: fixed;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    height: auto;
+    width: auto;
+    min-height: 100%;
+    min-width: 100%;
+    z-index: -9999;
+  }
+
   #showcase video {
-    width: 100%;
+    /*width: 100%;*/
+    height: 100vh;
+    z-index: -9999;
+    margin: 0;
+    padding: 0;
+  }
+
+  #get-started-button {
+    width: 40%;
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #get-started-button a {
+    font-size: 2rem;
+  }
+
+  section.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    height: 20rem;
+  }
+
+  section.container:nth-child(3n) {
+    flex-direction: row-reverse;
+  }
+
+  section.container i {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 4rem;
+  }
+
+  .parallax {
+    height: 200px;
+  }
+
+  .parallax-container {
+    margin-top: 100vh;
   }
 
 }
