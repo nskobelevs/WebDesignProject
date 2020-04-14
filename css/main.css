@@ -281,15 +281,12 @@ header {
   padding: 0;
 }
 
-.get-started-button#top-button {
+.get-started-button {
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
-  top: 50%;
+  top: 22vh;
   display: block;
-}
-
-.get-started-button {
   background-color: var(--color3);
   box-shadow: 0.2rem 0.4rem 0 var(--color2);
   -moz-box-shadow: 0.2rem 0.4rem 0 var(--color2);
@@ -353,7 +350,7 @@ section.container {
 
 #image2 {
   background: url("../img/casserole-dish.jpg") no-repeat fixed center;
-  background-size: 200%;
+  background-size: 400%;
 }
 
 .title-cards {
@@ -551,6 +548,7 @@ footer section ul {
 
   .get-started-button {
     width: 40%;
+    top: 50%;
   }
 
   .get-started-button a {
@@ -587,12 +585,21 @@ footer section ul {
   }
 
   .parallax {
-    height: 200px;
+    height: 20rem;
   }
 
   .parallax-container {
     margin-top: 100vh;
   }
+
+  #image1 {
+    background-size: 100%;
+  }
+
+  #image2 {
+    background-size: 200%;
+  }
+
 
 }
 
