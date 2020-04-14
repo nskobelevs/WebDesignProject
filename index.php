@@ -51,13 +51,7 @@
     </section>
 </div>
 
-<div class="container">
-    <span class="get-started-button" id="bottom-button">
-      <a href="users/sign-up">Pick your cuisine</a>
-    </span>
-</div>
-
-<?php //include("php/templates/footer.php") ?>
+<?php include("php/templates/footer.php") ?>
 <?php include_once("php/templates/scripts.php"); ?>
 </body>
 
