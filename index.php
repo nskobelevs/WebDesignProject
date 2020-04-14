@@ -12,13 +12,14 @@
 
 <div id="showcase">
     <img class="small-screen" src="img/wok.jpg" alt="A wok on a hob">
-    <span id="top-button" class="get-started-button">
-      <a href="users/sign-up">Pick your cuisine</a>
-    </span>
     <video class="large-screen" oncontextmenu="return false;" autoplay loop>
         <source src="videos/cooking_vegetables.mp4" type="video/mp4">
     </video>
 </div>
+
+<span id="top-button" class="get-started-button">
+      <a href="users/sign-up">Pick your cuisine</a>
+</span>
 
 <div class="parallax-container">
     <section class="container">
@@ -51,9 +52,7 @@
 </div>
 
 <div class="container">
-
-    <span class="large-screen" id="huge-margin"></span>
-    <span class="get-started-button small-screen">
+    <span class="get-started-button" id="bottom-button">
       <a href="users/sign-up">Pick your cuisine</a>
     </span>
 </div>
