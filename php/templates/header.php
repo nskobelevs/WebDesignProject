@@ -1,6 +1,6 @@
 <header>
     <div id="top-bar">
-        <a href="/"><h2>Cuisine Catering</h2></a>
+        <a href="."><h2>Cuisine Catering</h2></a>
     </div>
 
     <input type="checkbox" class="hidden" id="nav-checkbox">
@@ -18,10 +18,10 @@
                 <a <?php if ($page == "") {echo 'class="current-page"';} ?> href=".">Home</a>
             </li>
             <li>
-                <a <?php if ($page == "about") {echo 'class="current-page';} ?> href="about">About Us</a>
+                <a <?php if ($page == "about") {echo 'class="current-page';} ?> href="about.php">About Us</a>
             </li>
             <li>
-                <a <?php if ($page == "contact") {echo 'class="current-page';} ?> href="contact">Contact</a>
+                <a <?php if ($page == "contact") {echo 'class="current-page';} ?> href="contact.php">Contact</a>
             </li>
         </ul>
     </nav>

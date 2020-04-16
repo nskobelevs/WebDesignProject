@@ -113,6 +113,10 @@ textarea {
   --color5: rgba(230, 188, 205, 1);
 }
 
+h1, h2, h3, h4, h5 {
+  font-family: "Dancing Script", cursive;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -121,6 +125,9 @@ textarea {
 
 body {
   font-family: "Lato", Arial, Helvetica, sans-serif;
+}
+
+body, html {
   height: 100%;
 }
 
@@ -142,6 +149,13 @@ img {
   display: none;
 }
 
+h1 {
+  margin: 0;
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+  color: white;
+}
+
 /*Header and navigation*/
 
 header {
@@ -151,7 +165,6 @@ header {
   background-color: var(--color3);
   z-index: 10;
   color: white;
-  font-family: "Dancing Script", cursive;
   font-size: 1.2rem;
   height: 3rem;
 }
@@ -186,6 +199,8 @@ header {
   transform: translateX(-50%);
   transition: all 0.25s ease-in-out 0s;
 }
+
+/*Nav toggle on mobile*/
 
 #nav-toggle-icon::before {
   content: "";
@@ -229,6 +244,8 @@ header {
 #nav-checkbox:not(:checked)~.navigation {
   transform: translateY(-150%);
 }
+
+/*Navigation itself*/
 
 .navigation {
   position: -webkit-sticky;
@@ -308,6 +325,8 @@ header {
   color: white;
 }
 
+/*Main content*/
+
 .container {
   width: 100%;
   align-items: center;
@@ -328,6 +347,8 @@ section.container {
   text-align: center;
 }
 
+/*Parallax*/
+
 .parallax {
   background-size: contain;
   height: 15vh;
@@ -337,10 +358,6 @@ section.container {
   min-height: 100%;
   min-width: 100%;
   background-color: white;
-}
-
-#bottom-button {
-  margin: 10rem 0;
 }
 
 #image1 {
@@ -358,11 +375,84 @@ section.container {
   font-size: 2rem;
 }
 
-#huge-margin {
-  margin-bottom: 90vh;
+input[type=submit] {
+  margin: 2rem 0;
 }
 
+/*Image header for non-index pages*/
+body#about #header-section {
+  background: url("../img/burrito.jpg") no-repeat center;
+  background-size: 100%;
+}
+
+body#contact #header-section {
+  background: url("../img/burger.jpg") no-repeat center;
+  background-size: 100%;
+}
+
+#header-section {
+  min-height: 15vh;
+  text-align: center;
+}
+
+/*Contact page*/
+body#contact {
+  display: flex;
+  flex-direction: column;
+}
+
+body#contact main {
+  flex: 1 0 auto;
+}
+
+body#contact h1, body#about h1 {
+  padding: 2.5rem 0;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+}
+
+#contact-form>div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#contact-form #message {
+  height: 5rem;
+}
+
+input[type=submit] {
+  cursor: pointer;
+}
+
+.invalid-input {
+  border: 0.05rem solid red;
+  border-radius: 0.1rem;
+}
+
+input {
+  height: 2em;
+}
+
+.form-error-message {
+  color: red;
+}
+
+.form-success-message {
+  color: green;
+}
+
+/*Footer*/
+
 footer {
+  flex-shrink: 0;
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -482,7 +572,6 @@ footer section ul {
 
 
 @media only screen and (min-width: 35em) {
-
   .small-screen {
     display: none;
   }
@@ -538,7 +627,7 @@ footer section ul {
 
   #showcase video {
     /*width: 100%;*/
-    min-height: 100vh;
+    min-height: 100%;
     min-width: 100%;
     max-width: 120%;
     z-index: -9999;
@@ -599,6 +688,17 @@ footer section ul {
   #image2 {
     background-size: 200%;
   }
+
+/*  Contact Page*/
+
+  #contact input, textarea {
+    width: 70%;
+  }
+
+  #contact textarea {
+    height: auto;
+  }
+
 
 
 }

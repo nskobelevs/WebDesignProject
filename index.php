@@ -18,7 +18,7 @@
 </div>
 
 <span id="top-button" class="get-started-button">
-      <a href="users/sign-up">Pick your cuisine</a>
+      <a href="sign-up.php">Pick your cuisine</a>
 </span>
 
 <div class="parallax-container">
