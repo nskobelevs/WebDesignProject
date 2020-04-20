@@ -19,7 +19,7 @@
         <h1>Contact</h1>
     </section>
     <div class="container">
-        <form id="contact-form" action="php/mail.php" method="post">
+        <form id="contact-form" action="php/message.php" method="post">
             <div>
                 <label for="name">Full Name</label>
                 <input type="text" id="name" placeholder="John Doe">
@@ -30,9 +30,9 @@
             </div>
             <div>
                 <label for="message">Message</label>
-                <textarea id="message" placeholder="Hi, I was wondering if...."></textarea>
+                <textarea id="message" rows="10" placeholder="Hi, I was wondering if...."></textarea>
             </div>
-            <input type="submit" id="submit" rows="10" value="Send message">
+            <input type="submit" id="submit" value="Send message">
             <p class="form-message"></p>
         </form>
     </div>

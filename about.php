@@ -5,7 +5,7 @@
     <title>About</title>
     <?php include_once("php/templates/head.php"); ?>
 </head>
-<body>
+<body id="about">
 <?php include_once("php/templates/outdated_browser.php"); ?>
 <?php include_once("php/templates/header.php"); ?>
 <main>
