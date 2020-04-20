@@ -1,19 +1,19 @@
 ### Web Design Project
 
 ## Site features
-Mobile-first CSS to avoid mobile users loading excess CSS
-Tweaked mobile design
-Usage of php for code templates
-Parallax images on main page
-Uniform style across pages
-SQL database to store contact messages
-    Sanitising input via php
-Use of javascript for a "tab-like" page. (order.php)
+Mobile-first CSS to avoid mobile users loading excess CSS<br>
+Tweaked mobile design<br>
+Usage of php for code templates<br>
+Parallax images on main page<br>
+Uniform style across pages<br>
+SQL database to store contact messages<br>
+    Sanitising input via php<br>
+Use of javascript for a "tab-like" page. (order.php)<br>
 
 
 ## Credits
-HTML5 Boilerplate
-jQuery
+HTML5 Boilerplate<br>
+jQuery<br>
 
 
 # Images
@@ -39,4 +39,5 @@ jQuery
 
 # Other
 [Font-Awesome](https://fontawesome.com/)<br>
-[jQuery](https://jquery.com/)
+[jQuery](https://jquery.com/)<br>
+[HTML5 Boilerplate](https://html5boilerplate.com/)
