@@ -227,7 +227,6 @@ header {
   left: 0;
   background-color: white;
   transition: all 0.25s ease-in-out 0s;
-
 }
 
 #nav-checkbox:checked~#nav-toggle #nav-toggle-icon {
@@ -302,31 +301,34 @@ header {
   padding: 0;
 }
 
-.get-started-button {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 22vh;
-  display: block;
+.button {
   background-color: var(--color3);
   box-shadow: 0.2rem 0.4rem 0 var(--color2);
   -moz-box-shadow: 0.2rem 0.4rem 0 var(--color2);
   -webkit-box-shadow: 0.2rem 0.4rem 0 var(--color2);
   text-align: center;
   border-radius: 1rem;
-  margin: auto;
   width: 15rem;
   min-height: 2rem;
   font-family: "Dancing Script", cursive;
+  display: block;
+  font-size: 1.2rem;
+  margin: 0.4em 0;
+  color: white;
+}
+
+.get-started-button {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 22vh;
 }
 
 .get-started-button a {
   display: block;
   width: 100%;
   height: 100%;
-  font-size: 1.2rem;
-  margin: 0.4em 0;
-  color: white;
+
 }
 
 /*Main content*/
@@ -387,7 +389,7 @@ input[type=submit] {
 body#about #header-section {
   background: url("../img/fruit-salad.jpg") no-repeat 50% 60%;
   background-size: 100%;
-  text-shadow: 0.05rem 0.05rem black; /* Increased readability on bright background */
+  text-shadow: 0.05rem 0.05rem black; /* Increased readability on bright background image*/
 }
 
 body#contact #header-section {
@@ -395,9 +397,10 @@ body#contact #header-section {
   background-size: 100%;
 }
 
-body#sign-up #header-section {
+body#order #header-section {
   background: url("../img/sliced-fruit.jpg") no-repeat 50% 85%;
   background-size: 100%;
+  text-shadow: 0.05rem 0.05rem black; /* Increased readability on bright background image*/
 }
 
 #header-section {
@@ -463,41 +466,111 @@ input {
   color: green;
 }
 
-/*Sign Up Page*/
-body#sign-up form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-body#sign-up form div {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  margin: 0.5rem 0;
-}
-
-body#sign-up form div#tos {
-  flex-direction: row;
-  justify-content: flex-start;
-}
-
-body#sign-up form div#tos label {
-  text-align: center;
-  width: 100%;
-}
-
-body#sign-up form div#tos input {
-  width: auto;
-}
-
-/*body#sign-up form div#tos*/
 
 input[type=checkbox] {
   margin: 0.2rem;
+}
+
+/*Order page*/
+body#order {
+  display: flex;
+  flex-direction: column;
+}
+
+body#order main {
+  flex: 1 0 auto;
+}
+
+.number-icon {
+  color: var(--color3);
+  cursor: pointer;
+}
+
+.number-icon.current {
+  color: limegreen;
+}
+
+section.progress {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.line {
+  border: 0.05rem solid var(--color2);
+  width: 6%;
+  height: 1px;
+}
+
+.tabs h2 {
+  font-size: 2em;
+  color: black;
+  height: auto;
+}
+
+.tab {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab:not(.current-tab) {
+  display: none;
+}
+
+.tab-content {
+  width: 100%;
+}
+
+.cuisine-image {
+  width: 100%;
+  height: 5rem;
+  background-size: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  text-shadow: 0.1rem 0.1rem 0 black;
+  background-position: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.cuisine-image#chinese-cuisine {
+  background-image: url("../img/cooked-ramen.jpg");
+  background-position: 50% 60%;
+}
+
+.cuisine-image#italian-cuisine {
+  background-image: url("../img/pizza.jpg");
+}
+
+.cuisine-image#japanese-cuisine {
+  background-image: url("../img/sushi.jpg");
+}
+
+.cuisine-image#american-cuisine {
+  background-image: url("../img/burger.jpg");
+}
+
+#next-button {
+  width: 60%;
+  margin: auto;
+  cursor: pointer;
+}
+
+.cuisine-image i {
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  transform: translate(-50%, -50%);
+  color: greenyellow;
 }
 
 /*Footer*/
@@ -512,6 +585,7 @@ footer {
   -webkit-justify-content: center;
   background: var(--color3);
   color: white;
+  margin-top: 0.5rem;
 }
 
 footer section {
@@ -740,36 +814,8 @@ footer section ul {
     background-size: 200%;
   }
 
-/*  Contact Page*/
-
-  form {
-    width: 70%;
-  }
-
-  input, textarea {
-    width: 100%;
-  }
-
-  #contact textarea {
-    height: auto;
-  }
-
-  #sign-up form div:nth-child(1) {
-    flex-direction: row;
-  }
-
-  #sign-up form div:nth-child(1) div {
-    flex-direction: column;
-    margin: 0 0.2rem;
-  }
-
-  body#sign-up form div#tos {
-    justify-content: center;
-    align-items: center;
-  }
-
-  body#sign-up form div#tos label {
-    width: auto;
+  .cuisine-image {
+    height: 35vh;
   }
 
 }

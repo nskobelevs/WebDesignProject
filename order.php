@@ -2,57 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Cuisine Catering | Sign Up</title>
+    <title>Cuisine Catering | Chose your cuisine</title>
     <?php include("php/templates/head.php"); ?>
 
 </head>
-<body id="sign-up">
+<body id="order">
 <?php include("php/templates/header.php"); ?>
-
-<section id="header-section">
-    <h1>Create an account</h1>
-</section>
-
-<div class="container">
-
-    <form id="sign-up-form">
-        <div>
-            <div>
-                <label for="first-name">First Name</label>
-                <input type="text" id="first-name">
+<main>
+    <section id="header-section">
+        <h1>Order</h1>
+    </section>
+    <section class="progress">
+            <span id="number-1" class="current fa-stack number-icon">
+                <span class="fa fa-circle-o fa-stack-2x"></span>
+                <strong class="fa-stack-1x">1</strong>
+            </span>
+        <div class="line"></div>
+        <span id="number-2" class="fa-stack number-icon">
+                <span class="fa fa-circle-o fa-stack-2x"></span>
+                <strong class="fa-stack-1x">2</strong>
+            </span>
+        <div class="line"></div>
+        <span id="number-3" class="fa-stack number-icon">
+                <span class="fa fa-circle-o fa-stack-2x"></span>
+                <strong class="fa-stack-1x">3</strong>
+            </span>
+    </section>
+    <section class="tabs">
+        <section id="tab-1" class="tab current-tab">
+            <h2>Pick your cuisine</h2>
+            <div class="tab-content">
+                <div id="american-cuisine" class="cuisine-image">
+                    <h3>American</h3>
+                    <i class="hidden fas fa-check"></i>
+                </div>
+                <div id="chinese-cuisine" class="cuisine-image">
+                    <h3>Chinese</h3>
+                    <i class="hidden fas fa-check"></i>
+                </div>
+                <div id="italian-cuisine" class="cuisine-image">
+                    <h3>Italian</h3>
+                    <i class="hidden fas fa-check"></i>
+                </div>
+                <div id="japanese-cuisine" class="cuisine-image">
+                    <h3>Japanese</h3>
+                    <i class="hidden fas fa-check"></i>
+                </div>
             </div>
-            <div>
-                <label for="second-name">Second Name</label>
-                <input type="text" id="second-name">
+        </section>
+        <section id="tab-2" class="tab">
+            <h2>Pick your group size</h2>
+            <div class="tab-contents">
+                <form>
+                    <label for="capacity">Number of people</label>
+                    <input id="capacity" type="number" min="10" max="500"/>
+                </form>
             </div>
-        </div>
-        <div>
-            <label for="email">Email</label>
-            <input type="email" id="email">
-            <label for="email-confirm">Confirm Email</label>
-            <input type="email" id="email-confirm">
-        </div>
-        <div>
-            <label for="password">Password</label>
-            <input type="password" id="password">
-            <label for="password">Confirm Password</label>
-            <input type="password" id="password-confirm">
-        </div>
-
-        <div id="tos">
-            <input type="checkbox" id="tosAccept">
-            <label for="tosAccept">I accept the <a href="https://youtu.be/dQw4w9WgXcQ">terms and conditions</a></label>
-        </div>
-
-        <input type="submit" value="Join">
-        <p class="form-message"></p>
-
-    </form>
-
-</div>
+        </section>
+        <section id="tab-3" class="tab">
+            <h2>Confirmation</h2>
+            <p>Thank you for your order!</p>
+        </section>
+    </section>
+    <span id="next-button" class="button">Next</span>
+</main>
 
 <?php include("php/templates/footer.php"); ?>
 <?php include("php/templates/scripts.php"); ?>
-
 </body>
 </html>

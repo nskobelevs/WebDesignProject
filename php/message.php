@@ -11,14 +11,13 @@ if(isset($_POST['submit'])) {
     $emailIsEmpty = empty($email);
     $emailIsValid = filter_var($email, FILTER_VALIDATE_EMAIL);
     $messageIsShort = strlen($message) < 20;
-    $messageTooLong = strlen($message) > 1000;
 
     if ($nameIsEmpty || $emailIsEmpty) {
         echo "<span class='form-error-message'>Please don't leave any fields blank</span>";
     } elseif (!$emailIsValid) {
         echo "<span class='form-error-message'>Please enter a valid e-mail address so we can get back to you</span>";
     } elseif ($messageIsShort) {
-        echo "<span class='form-error-message'>Please add more info to your message</span>";
+        echo "<span class='form-error-message'>You message is too short. Consider adding more info</span>";
     } else {
 
         $success = true;

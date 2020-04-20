@@ -17,8 +17,8 @@
     </video>
 </div>
 
-<span id="top-button" class="get-started-button">
-      <a href="sign-up.php">Pick your cuisine</a>
+<span class="button get-started-button">
+      <a href="order.php">Pick your cuisine</a>
 </span>
 
 <div class="parallax-container">
